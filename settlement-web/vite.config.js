@@ -10,13 +10,8 @@ export default defineConfig({
     }
   },
   server: {
-    port: 3000,
-    proxy: {
-      '/api': {
-        target: 'http://localhost:8080',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '')
-      }
-    }
+    port: 3001,  // 确保端口设置为 3001
+    host: '0.0.0.0',  // 允许外部访问
+    open: true  // 自动打开浏览器
   }
 })

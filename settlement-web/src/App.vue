@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <!-- 确保有 router-view 来渲染页面内容 -->
     <router-view />
   </div>
 </template>
@@ -11,6 +12,7 @@ export default {
 </script>
 
 <style>
+/* 重置默认样式 */
 * {
   margin: 0;
   padding: 0;
@@ -19,5 +21,10 @@ export default {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #f5f5f5;
+}
+
+#app {
+  min-height: 100vh;
 }
 </style>
